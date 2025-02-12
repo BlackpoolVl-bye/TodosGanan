@@ -1,0 +1,7 @@
+#3c8a3d = Verde claro
+
+#ffa30f = Amarillo
+
+#FF6830 = Naranja claro
+
+#FFFFFF = Blanco hielo
