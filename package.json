@@ -1,0 +1,17 @@
+{
+  "name": "todosganan",
+  "version": "1.0.0",
+  "description": "Proyecto_TodosGanan\r cambios que se le hicieron:\r configuracion modular\r agrego de dominio\r mejoras en la verificacion (en progreso)\r Boton validacion (en progreso)\r Conexion a la base de datos (en progreso)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.13.0"
+  }
+}
