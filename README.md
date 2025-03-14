@@ -1,14 +1,14 @@
 Proyecto_TodosGanan
-* cambios que se le hicieron:
-* configuracion modular
-* agrego de dominio
-* mejoras en la verificacion (en progreso)
-* Boton validacion (en progreso)
-* Conexion a la base de datos (Listo)
+ cambios que se le hicieron:
+ configuracion modular
+ agrego de dominio
+ mejoras en la verificacion (en progreso)
+ Boton validacion (en progreso)
+ Conexion a la base de datos (Listo)
 
 mejoras en la estructura y control de archivos:
 
-- vamos a tratar de que el proyecto sea modular y maneje esta estructura en el desarrollo
+vamos a tratar de que el proyecto sea modular y maneje esta estructura en el desarrollo
 
 les dejo un pequeño mapeado de como van a ir las estucturas de manejo de archivo para que sea mas responsivo,
 modular y comodo de trabajar:
