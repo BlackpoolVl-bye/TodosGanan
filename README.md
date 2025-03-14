@@ -1,1 +1,1 @@
-Proyecto:Loteria_Digital
+Proyecto_Loteria_Digital
