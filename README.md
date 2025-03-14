@@ -3,7 +3,7 @@ Proyecto_TodosGanan
  configuracion modular
  agrego de dominio
  mejoras en la verificacion (en progreso)
- Boton validacion (en progreso)
+ Boton validacion (listo desde mi punto de vista aaron no me mates porfa :>)
  Conexion a la base de datos (Listo)
 
 mejoras en la estructura y control de archivos:
