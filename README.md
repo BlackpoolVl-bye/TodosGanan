@@ -1,7 +1,7 @@
 Proyecto_TodosGanan
 cambios que se le hicieron:
-comfiguracion modular
+configuracion modular
 agrego de dominio
 mejoras en la verificacion (en progreso)
 Boton validacion (en progreso)
-Cnexion a la base de datos (en progreso)
+Conexion a la base de datos (en progreso)
