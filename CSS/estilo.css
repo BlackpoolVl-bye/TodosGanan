@@ -107,3 +107,25 @@ header {
     background-color: #0056b3;
     
   }
+  .nave{
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 5px;
+  }
+  .nave a:hover{
+    text-decoration: none;
+	  color:black;
+  }
+  .nave a{
+    text-decoration: none;
+    font-weight: 900;
+    margin: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF;
+    background: #ffa30f;
+    padding: 4px;
+    border-radius: 10px;
+  }

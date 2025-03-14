@@ -48,9 +48,9 @@ body{
     display: inline-block;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 15px; /* Altura del contenedor */
+  justify-content: center;
+  align-items: center;
+  height: 15px;
   }
 
   h4 {
@@ -77,27 +77,27 @@ body{
   }
 
   footer {
-    position: fixed; /* Para fijar el pie de página */
-    bottom: 0; /* Para que se pegue a la parte inferior */
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
-    background-color: #FFFFFF; /* Color de fondo */
-    padding: 2px; /* Espacio alrededor del contenido */
+    background-color: #FFFFFF;
+    padding: 2px;
     text-align: center;
   }
   
   .footer-content {
-    display: flex; /* Para alinear logo y texto horizontalmente */
-    align-items: center; /* Para centrar verticalmente */
+    display: flex;
+    align-items: center;
     text-align: center;
   }
   
   .footer-logo {
-    margin-right: 10px; /* Espacio entre logo y texto */
+    margin-right: 10px;
   }
   
   .footer-logo img {
-    max-width: 70px; /* Ancho máximo del logo */
+    max-width: 70px;
     border-radius: 100px;
   }
   
@@ -233,8 +233,7 @@ body{
     margin-top: -20;
     font-size: 23px;
     border-radius: 10px;
-    text-align:justify;
-    text-align: center;
+    text-align: right;
     font-style: unset;
   }
   .pago {
@@ -255,4 +254,22 @@ body{
   background: #FFFFFF;
   padding: 3px;
   border-radius: 100px;
+}
+li {
+  cursor: pointer;
+  list-style-type: none;
+  margin-top: 5px;
+  padding: 4px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #FFFFFF;
+  color: #3c8a3d;
+  border-radius: 90px;
+  gap: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.letra{
+  text-align: right;
+  color: black;
 }
