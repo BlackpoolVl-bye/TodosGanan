@@ -1,0 +1,264 @@
+body {
+    background: #3c8a3d;
+}
+header {
+    display: flex; 
+    align-items: center;
+    padding: 2px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+  }
+  .separador {
+    background-color: #3c8a3d;
+    height: 6px;
+    margin: 12px;
+	border-radius: 100px;
+  }
+
+
+  h3 {
+    background-color: #ffa30f;
+    color: #FFFFFF;
+    padding: 23px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100px;
+    display: inline-block;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 15px; /* Altura del contenedor */
+  }
+
+  h4 {
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    padding: 8px;
+  }
+  
+  .logo {
+    margin-right: 10px;
+  }
+  
+  .logo img {
+    max-width: 90px; 
+    border-radius: 100px;
+  }
+  
+  .nombre-pagina h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffa30f;
+    text-align: justify;
+  }
+
+  footer {
+    position: fixed; /* Para fijar el pie de página */
+    bottom: 0; /* Para que se pegue a la parte inferior */
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF; /* Color de fondo */
+    padding: 2px; /* Espacio alrededor del contenido */
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex; /* Para alinear logo y texto horizontalmente */
+    align-items: center; /* Para centrar verticalmente */
+    text-align: center;
+  }
+  
+  .footer-logo {
+    margin-right: 10px; /* Espacio entre logo y texto */
+  }
+  
+  .footer-logo img {
+    max-width: 70px; /* Ancho máximo del logo */
+    border-radius: 100px;
+  }
+  
+  .footer-text p {
+    margin: 0;
+    color: #ffa30f;
+    font-size: 23px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-weight: 900;
+  }
+  .container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffa30f;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffa30f;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  input[type="tel"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3c8a3d;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #3c8a3d;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .whatsapp-link {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 20px auto; 
+    background: #90ee90;
+    padding: 8px;
+    border-radius: 20px;
+  }
+  
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .whatsapp-link a {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+  }
+  
+  @media (max-width: 768px) {
+    .whatsapp-link {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .whatsapp-icon {
+      margin-right: 0;
+    }
+  }
+  button {
+    background-color: #ffa30f;
+    border: none; 
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900px;
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .nave{
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .nave a:hover{
+    text-decoration: none;
+	  color:black;
+  }
+  .nave a{
+    text-decoration: none;
+    font-weight: 900;
+    margin: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF;
+    background: #ffa30f;
+    padding: 4px;
+    border-radius: 10px;
+  }
+  .boleto{
+    text-align: center;
+  }
+  .boleto h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    background: #ffa30f;
+    color: #FFFFFF;
+    padding: 6px;
+    font-size: 23px;
+    border-radius: 10px;
+  }
+  .premios h5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    background: #FFFFFF;
+    color: #3c8a3d;
+    padding: 6px;
+    margin-bottom: -10px;
+    margin-top: -20;
+    font-size: 23px;
+    border-radius: 10px;
+    text-align:justify;
+    text-align: center;
+    font-style: unset;
+  }
+  .pago {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .pago h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 23px;
+    text-align: left;
+  }
+  .att{
+    position: fixed;
+  bottom: 90px;
+  right: 10px;
+  z-index: 100;
+  background: #FFFFFF;
+  padding: 3px;
+  border-radius: 100px;
+}
+.fi1{
+  display: flex;
+  margin-right: 10px;
+}
+.fi2{
+  display: flex;
+  margin-right: 10px;
+}
