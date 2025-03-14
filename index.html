@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Logo/TodosGananLogo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="CSS/estilo.css">
+    <script src="./Archivos_Js/ValidacionBoletos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.js"></script>
-    <script src="ValidacionBoletos"></script>
     <title>TodosGanan.com</title>
 </head>
 <body>
@@ -21,7 +21,6 @@
 <a class="container" href="SRC/main.html">Link de prueba</a>
     <div class="container">
         <h1>Verificador de Boletos</h1>
-      
         <div class="input-group">
           <label for="telefono">Número de Teléfono:</label>
           <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
@@ -31,9 +30,8 @@
           <label for="boleto">Número de Boleto:</label>
           <input type="text" id="boleto" name="boleto" placeholder="Ingresa tu número de boleto">
         </div>
-      
-        <button onclick="verificarBoleto()">Verificar</button>
-      </div>
+      <button onclick="validarBoleto()">Verificar</button>
+    </div>
 
 <footer>
       <div class="footer">
