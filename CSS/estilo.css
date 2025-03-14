@@ -129,3 +129,26 @@ header {
     padding: 4px;
     border-radius: 10px;
   }
+  h3 {
+    background-color: #ffa30f;
+    color: #FFFFFF;
+    padding: 23px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100px;
+    display: inline-block;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  }
+
+  h4 {
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    padding: 8px;
+  }
