@@ -29,3 +29,7 @@ modular y comodo de trabajar:
 │
 ├── index.html            # Página principal
 └── Server.js             # Servidor en Node.js
+
+/Jesus
+ Creacion del HTML (INICIO.html, Gano.html y cambio del Verficador.html). Esctructura nueva de index.html
+ Modificacion conjunta con CSS
