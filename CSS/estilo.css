@@ -24,7 +24,7 @@ header {
     text-align: justify;
   }
 
-  footer {
+  .footer {
     position: fixed; /* Para fijar el pie de página */
     bottom: 0; /* Para que se pegue a la parte inferior */
     left: 0;
