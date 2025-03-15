@@ -8,6 +8,8 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
+
+//actualizar usuario
 app.get('/api/usuarios', (req, res) => {
     connection.query('SELECT * FROM usuario', (error, results) => {
       if (error) {
@@ -19,6 +21,8 @@ app.get('/api/usuarios', (req, res) => {
     });
   });
 
+  
+  //actualizar numeros
   app.get('/api/numeros', (req, res) => {
     connection.query('SELECT * FROM numeros', (error, results) => {
       if (error) {
@@ -29,6 +33,8 @@ app.get('/api/usuarios', (req, res) => {
       }
     });
   });
+  
+  //actualizar usuario
   app.post('/api/usuarios', (req, res) => {
     const { ID, Nombre, Apellido, Telf } = req.body;
     connection.query(
@@ -44,6 +50,8 @@ app.get('/api/usuarios', (req, res) => {
       }
     );
   });
+  
+  //agregar numeros
   app.post('/api/numeros', (req, res) => {
     const { ID, Numeros, Descripcion } = req.body;
     connection.query(
@@ -59,6 +67,8 @@ app.get('/api/usuarios', (req, res) => {
       }
     );
   });
+  
+  //modificar usuario
   app.put('/api/usuarios/:id', (req, res) => {
     const { id } = req.params;
     const { Nombre, Apellido, Telf } = req.body;
@@ -77,6 +87,8 @@ app.get('/api/usuarios', (req, res) => {
       }
     );
   });
+  
+  //borrar usuario
   app.delete('/api/usuarios/:id', (req, res) => {
     const { id } = req.params;
     connection.query('DELETE FROM usuario WHERE ID = ?', [id], (error, results) => {
@@ -90,6 +102,7 @@ app.get('/api/usuarios', (req, res) => {
       }
     });
   });
+
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });
