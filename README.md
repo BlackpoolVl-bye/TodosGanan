@@ -5,6 +5,7 @@ Proyecto_TodosGanan
  mejoras en la verificacion (en progreso)
  Boton validacion (listo desde mi punto de vista aaron no me mates porfa :>)
  Conexion a la base de datos (Listo)
+ autoamtizacion del registro de los tiques.(en progreso)
 
 mejoras en la estructura y control de archivos:
 
@@ -32,4 +33,4 @@ modular y comodo de trabajar:
 
 /Jesus
  Creacion del HTML (INICIO.html, Gano.html y cambio del Verficador.html). Esctructura nueva de index.html
- Modificacion conjunta con CSS
+ Modificacion conjunta con CSS 10/10
