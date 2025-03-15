@@ -1,11 +1,11 @@
 Proyecto_TodosGanan
  cambios que se le hicieron:
- configuracion modular
- agrego de dominio
+
  mejoras en la verificacion (en progreso)
- Boton validacion (listo desde mi punto de vista aaron no me mates porfa :>)
- Conexion a la base de datos (Listo)
  autoamtizacion del registro de los tiques.(en progreso)
+ agregar un registro de usuarios para la base de datos (en progreso, ya se esta viendo con la base de datos)
+ crear una interaccion de admin para vaciar la data de los numeros de loteria (en progreso)
+ mejorar el sistema de ruleta (en progreso)
 
 mejoras en la estructura y control de archivos:
 
