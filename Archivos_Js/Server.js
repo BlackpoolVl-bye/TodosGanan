@@ -160,3 +160,7 @@ app.post('/api/login', async (req, res) => {
       res.status(500).json({ error: 'Error al iniciar sesión' });
   }
 });
+
+//puebas de registros
+const [results] = await connection.query('SELECT * FROM usuario');
+console.log(results);
