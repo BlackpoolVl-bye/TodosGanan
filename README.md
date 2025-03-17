@@ -43,6 +43,6 @@ sugerencias futuras para seguridad:
 
 cambios en el proyecto:
 
-    se agrego un logion de usuario medio piero para evitar informacion comprometedora a la pagina
+    se agrego un logion de usuario medio pidrero para evitar informacion comprometedora a la pagina
 
     *(nota: nunca poner datos de resgitro de pagos directamente en la pagina, eso se tiene que manejar en privado, a nivel de soporte)*
