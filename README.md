@@ -33,10 +33,10 @@ modular y comodo de trabajar:
 
 sugerencias futuras para seguridad:
 
-Protección contra ataques comunes:
+    Protección contra ataques comunes:
 
-SQL Injection: Usa consultas parametrizadas o un ORM (como Sequelize) para evitar inyecciones SQL.
+        SQL Injection: Usa consultas parametrizadas o un ORM (como Sequelize) para evitar inyecciones SQL.
 
-XSS (Cross-Site Scripting): Sanitiza los datos que se muestran en la página para evitar la ejecución de scripts maliciosos.
+        XSS (Cross-Site Scripting): Sanitiza los datos que se muestran en la página para evitar la ejecución de scripts maliciosos.
 
-CSRF (Cross-Site Request Forgery): Implementa tokens CSRF para proteger las solicitudes POST.
+        CSRF (Cross-Site Request Forgery): Implementa tokens CSRF para proteger las solicitudes POST.
