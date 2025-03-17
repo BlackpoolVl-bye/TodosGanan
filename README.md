@@ -31,6 +31,12 @@ modular y comodo de trabajar:
 ├── index.html            # Página principal
 └── Server.js             # Servidor en Node.js
 
-/Jesus
- Creacion del HTML (INICIO.html, Gano.html y cambio del Verficador.html). Esctructura nueva de index.html
- Modificacion conjunta con CSS 10/10
+sugerencias futuras para seguridad:
+
+Protección contra ataques comunes:
+
+SQL Injection: Usa consultas parametrizadas o un ORM (como Sequelize) para evitar inyecciones SQL.
+
+XSS (Cross-Site Scripting): Sanitiza los datos que se muestran en la página para evitar la ejecución de scripts maliciosos.
+
+CSRF (Cross-Site Request Forgery): Implementa tokens CSRF para proteger las solicitudes POST.
