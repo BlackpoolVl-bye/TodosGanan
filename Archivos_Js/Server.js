@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const connection = require('./Conexion.js');
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = 3000;
@@ -105,4 +106,57 @@ app.get('/api/usuarios', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
+});
+
+// Ruta para registrar un usuario
+app.post('/api/registro', async (req, res) => {
+  const { ID, Nombre, Apellido, Telf, Contrasena } = req.body;
+
+  if (!ID || !Nombre || !Apellido || !Telf || !Contrasena) {
+      return res.status(400).json({ error: 'Todos los campos son obligatorios' });
+  }
+
+  try {
+      const hashedPassword = await bcrypt.hash(Contrasena, 10); // Hashear la contraseña
+
+      const [results] = await connection.query(
+          'INSERT INTO usuario (ID, Nombre, Apellido, Telf, Contrasena) VALUES (?, ?, ?, ?, ?)',
+          [ID, Nombre, Apellido, Telf, hashedPassword]
+      );
+
+      res.json({ message: 'Usuario registrado correctamente', id: results.insertId });
+  } catch (error) {
+      console.error('Error al registrar el usuario:', error);
+      res.status(500).json({ error: 'Error al registrar el usuario' });
+  }
+});
+
+// Ruta para el login
+app.post('/api/login', async (req, res) => {
+  const { ID, Contrasena } = req.body;
+
+  if (!ID || !Contrasena) {
+      return res.status(400).json({ error: 'ID y contraseña son obligatorios' });
+  }
+
+  try {
+      const [users] = await connection.query('SELECT * FROM usuario WHERE ID = ?', [ID]);
+
+      if (users.length === 0) {
+          return res.status(404).json({ error: 'Usuario no encontrado' });
+      }
+
+      const user = users[0];
+      const passwordMatch = await bcrypt.compare(Contrasena, user.Contrasena);
+
+      if (!passwordMatch) {
+          return res.status(401).json({ error: 'Contraseña incorrecta' });
+      }
+
+      const { Contrasena: _, ...userData } = user; // Excluir la contraseña de la respuesta
+      res.json({ message: 'Login exitoso', user: userData });
+  } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+      res.status(500).json({ error: 'Error al iniciar sesión' });
+  }
 });

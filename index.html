@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Logo/TodosGananLogo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="CSS/Inicio.css">
-    <title>TodosGanan</TodosGanan></title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>TodosGanan</title>
 </head>
 <body>
     <div class="nave">
@@ -16,9 +17,50 @@
         </nav>
     </div>
     <h3>TodosGanan.com</h3>
-    <h4>Entre al siguiente grupo de WhatsApp para que consulte los numeros disponibles y finalmente regrese a la pagina
-        web para realizar la compra del boleto.... Posteriormente cuando sea la hora de la entrega del premio ingresar
-        su numero del boleto en el verificador para confirmar y reclamar su premio:</h4>
+
+    <!-- Formulario de registro -->
+    <div class="registro">
+        <h4>Regístrate para participar:</h4>
+        <form id="registroForm">
+            <div class="input-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="input-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+            </div>
+            <div class="input-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+            <div class="input-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <!-- Formulario de login -->
+    <div class="login">
+        <h4>Inicia sesión:</h4>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="loginID">ID:</label>
+                <input type="text" id="loginID" name="loginID" placeholder="Ingresa tu ID" required>
+            </div>
+            <div class="input-group">
+                <label for="loginContrasena">Contraseña:</label>
+                <input type="password" id="loginContrasena" name="loginContrasena" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+
+    <h4>Entre al siguiente grupo de WhatsApp para que consulte los números disponibles y finalmente regrese a la página
+        web para realizar la compra del boleto.... Posteriormente, cuando sea la hora de la entrega del premio, ingrese
+        su número del boleto en el verificador para confirmar y reclamar su premio:</h4>
 
     <div class="whatsapp-link">
         <a href="https://chat.whatsapp.com/LsiKywiy26895nskoa8TFO" target="_blank">
@@ -31,14 +73,14 @@
     </div>
     <div class="boleto">
         <h5>
-            Informacion de premios:
+            Información de premios:
             <br>
             BOLETO: 5$
         </h5>
     </div>
     <div class="premios">
         <h5>
-                <div class="letra">--1PM--4PM-7PM</div>
+            <div class="letra">--1PM--4PM-7PM</div>
             TachiraA:1000$-50$-N/A<br>
             TachiraB:500$--50$-N/A<br>
             Chance-A:300$--50$-25$<br>
@@ -51,55 +93,99 @@
             Caliente-B:50$--50$-25$<br>
         </h5>
     </div>
-<h4>Realice el pago del boleto para finalmente participar, recuerde tomarle captura de pantalla al pago para ser
-    confirmado y asi darle su numero de boleto.
+    <h4>Acceda al siguiente enlace para entrar al verificador de boletos y finalmente entrar al apartado para reclamar
+        su premio:</h4>
+
+    <button onclick="window.location.href='SRC/Verificador.html'">VERIFICADOR</button>
+
     <br>
-    <center>
-    DATOS BANCARIOS:
-</h4>
-<div class="pago">
-    <center>
-    <img src="/Logo/banco.png" height="130" width="270" alt="">
-</center>
-<h5>
-    04142185251
+    <div class="separador"></div>
     <br>
-    BANCAMIGA
     <br>
-    V.7926098
-</h5>
-</div>
-<h4>
-    Envie su captura del pago para finalizar con el proceso de la compra de su boleto:
-</h4>
-<center>
-    <div class="whatsapp-link">
-        <a href="https://wa.me/584149167573" target="_blank">
-            Haga click para que envie el pago
-        </a>
-    </div>
-</center>
+    <div class="separador"></div>
 
-<h4>Acceda al siguiente enlance para entrar al verificador de boletos y finalmente entrar al apartado para reclamar
-    su premio:</h4>
-
-<button onclick="window.location.href='SRC/Verificador.html'">VERIFICADOR</button>
-
-<br>
-<div class="separador"></div>
-<br>
-<br>
-<div class="separador"></div>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="/Logo/TodosGananLogo.jpg" alt="Logo de la página">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/Logo/TodosGananLogo.jpg" alt="Logo de la página">
+            </div>
+            <div class="footer-text">
+                <p>TodosGanan.com</p>
+            </div>
         </div>
-        <div class="footer-text">
-            <p>TodosGanan.com</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <script>
+        // Manejar el envío del formulario de registro
+        document.getElementById('registroForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const telefono = document.getElementById('telefono').value;
+            const contrasena = document.getElementById('contrasena').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/registro', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ID: Math.floor(Math.random() * 1000), // Generar un ID aleatorio (puedes cambiarlo)
+                        Nombre: nombre,
+                        Apellido: apellido,
+                        Telf: telefono,
+                        Contrasena: contrasena,
+                    }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    Swal.fire('Éxito', 'Registro exitoso. Ahora puedes iniciar sesión.', 'success').then(() => {
+                        window.location.href = '/SRC/Verificador.html'; // Redirigir al verificador
+                    });
+                } else {
+                    Swal.fire('Error', data.error, 'error');
+                }
+            } catch (error) {
+                Swal.fire('Error', 'Hubo un problema al registrar el usuario.', 'error');
+            }
+        });
+
+        // Manejar el envío del formulario de login
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const id = document.getElementById('loginID').value;
+            const contrasena = document.getElementById('loginContrasena').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ID: id,
+                        Contrasena: contrasena,
+                    }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    Swal.fire('Éxito', 'Inicio de sesión exitoso.', 'success').then(() => {
+                        window.location.href = '/SRC/Verificador.html'; // Redirigir al verificador
+                    });
+                } else {
+                    Swal.fire('Error', data.error, 'error');
+                }
+            } catch (error) {
+                Swal.fire('Error', 'Hubo un problema al iniciar sesión.', 'error');
+            }
+        });
+    </script>
 </body>
 </html>

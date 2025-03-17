@@ -40,3 +40,9 @@ sugerencias futuras para seguridad:
         XSS (Cross-Site Scripting): Sanitiza los datos que se muestran en la página para evitar la ejecución de scripts maliciosos.
 
         CSRF (Cross-Site Request Forgery): Implementa tokens CSRF para proteger las solicitudes POST.
+
+cambios en el proyecto:
+
+    se agrego un logion de usuario medio piero para evitar informacion comprometedora a la pagina
+
+    *(nota: nunca poner datos de resgitro de pagos directamente en la pagina, eso se tiene que manejar en privado, a nivel de soporte)*
