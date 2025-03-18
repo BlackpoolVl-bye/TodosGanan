@@ -174,17 +174,6 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-// Pruebas de registros (esto no debe estar en producción)
-app.get('/api/pruebas', async (req, res) => {
-    try {
-        const [results] = await connection.query('SELECT * FROM usuario');
-        logger.info('Pruebas de registros:', results);
-        res.json(results);
-    } catch (error) {
-        logger.error('Error en la prueba:', error);
-        res.status(500).json({ error: 'Error en la prueba' });
-    }
-});
 
 app.listen(port, () => {
     logger.info(`Servidor escuchando en el puerto ${port}`);

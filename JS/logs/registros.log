@@ -1,2 +1,5 @@
 {"level":"info","message":"Servidor escuchando en el puerto 3000","timestamp":"2025-03-18T00:07:00.370Z"}
 {"Apellido":"Melano","Contrasena":"********","ID":906,"Nombre":"Rosa","Telf":"+584126385204","fecha":"2025-03-18T00:08:26.883Z","level":"info","message":"Nuevo usuario registrado:","timestamp":"2025-03-18T00:08:26.883Z"}
+{"Apellido":"Meheste","Contrasena":"********","ID":982,"Nombre":"Para","Telf":"+560415679855","fecha":"2025-03-18T00:15:25.297Z","level":"info","message":"Nuevo usuario registrado:","timestamp":"2025-03-18T00:15:25.297Z"}
+{"ID":"906","level":"info","message":"Login exitoso:","timestamp":"2025-03-18T00:19:28.875Z"}
+{"Apellido":"caraebolas","Contrasena":"********","ID":691,"Nombre":"hola","Telf":"64613462","fecha":"2025-03-18T00:23:02.050Z","level":"info","message":"Nuevo usuario registrado:","timestamp":"2025-03-18T00:23:02.050Z"}
