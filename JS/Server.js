@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const connection = require('./Conexion.js');
 const bcrypt = require('bcrypt');
+
+const connection = require('./Conexion.js');
 const logger = require('./Logger.js');
 
 const app = express();
@@ -119,7 +120,7 @@ app.post('/api/registro', async (req, res) => {
     }
 
     try {
-        const hashedPassword = await bcrypt.hash(Contrasena, 10); // Hashear la contraseña
+        const hashedPassword = await bcrypt.hash(Contrasena, 10);
 
         const [results] = await connection.query(
             'INSERT INTO usuario (ID, Nombre, Apellido, Telf, Contrasena) VALUES (?, ?, ?, ?, ?)',
@@ -131,7 +132,7 @@ app.post('/api/registro', async (req, res) => {
             Nombre,
             Apellido,
             Telf,
-            Contrasena: '********', // No mostrar la contraseña real
+            Contrasena: '********',
             fecha: new Date().toISOString(),
         });
 
@@ -164,7 +165,7 @@ app.post('/api/login', async (req, res) => {
             return res.status(401).json({ error: 'Contraseña incorrecta' });
         }
 
-        const { Contrasena: _, ...userData } = user; // Excluir la contraseña de la respuesta
+        const { Contrasena: _, ...userData } = user; 
         logger.info('Login exitoso:', { ID });
         res.json({ message: 'Login exitoso', user: userData });
     } catch (error) {
